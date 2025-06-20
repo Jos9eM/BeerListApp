@@ -1,4 +1,7 @@
 pluginManagement {
+    plugins{
+        id("com.android.library") version "8.9.3"
+    }
     repositories {
         google {
             content {
@@ -23,7 +26,6 @@ rootProject.name = "BeerListApp"
 
 include(":app")
 include(":core")
-include(":home")
 include(":home:home_data")
 include(":home:home_domain")
 include(":home:home_presentation")
