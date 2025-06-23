@@ -1,5 +1,4 @@
-package com.misc.beerlistapp.di
-
+package com.misc.core.di
 
 import com.misc.core.navigation.DefaultNavigator
 import com.misc.core.navigation.Destination
@@ -12,10 +11,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object AppModule {
-    @Provides
-    @Singleton
-    fun providesDefaultNavigator(): Navigator {
-        return DefaultNavigator(startDestination = Destination.Splash)
-    }
+object CoreModule {
+
+
 }

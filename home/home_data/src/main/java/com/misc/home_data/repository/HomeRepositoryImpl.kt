@@ -2,7 +2,7 @@ package com.misc.home_data.repository
 
 import com.misc.home_data.mapper.toDetailBeer
 import com.misc.home_data.remote.BeerApi
-import com.misc.home_domain.model.DetailBeer
+import com.misc.core.model.DetailBeer
 import com.misc.home_domain.repository.HomeRepository
 
 class HomeRepositoryImpl(

@@ -3,6 +3,8 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.hilt.android)
+    kotlin("kapt")
 }
 
 android {
@@ -42,6 +44,8 @@ dependencies {
     implementation(libs.bundles.androidx.compose)
     implementation(libs.bundles.compose.debug)
     implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.bundles.hilt)
+    kapt(libs.hilt.compiler)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

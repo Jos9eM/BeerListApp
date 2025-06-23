@@ -43,10 +43,10 @@ dependencies {
     implementation(project(":core"))
     implementation(project(":home:home_domain"))
 
+    implementation(libs.bundles.androidx.core)
+    implementation(libs.bundles.androidx.compose)
+    implementation(libs.bundles.compose.debug)
     implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.androidx.ui)
-    implementation(libs.androidx.material3)
-    implementation(libs.androidx.navigation.compose)
     implementation(libs.bundles.hilt)
     kapt(libs.hilt.compiler)
 
