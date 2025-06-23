@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">core</string>
     <string name="app_welcome">Welcome</string>
+    <string name="app_error">Something went wrong</string>
     <string name="beer_list">Beer List:</string>
     <string name="beer_ibu">IBU:</string>
     <string name="beer_first_brewed">First Brewed: %1$s</string>

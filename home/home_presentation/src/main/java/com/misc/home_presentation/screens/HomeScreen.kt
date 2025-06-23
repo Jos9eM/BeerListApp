@@ -11,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.misc.core.model.DetailBeer
 import com.misc.core.ui.IbuText
@@ -29,8 +30,8 @@ fun HomeScreen(
                 modifier = Modifier.clickable {
                 viewModel.onEvent(HomeEvent.OnBeerClick(it))
             },
-                headlineContent = { Text(it.name) },
-                supportingContent = { Text(it.tagline) },
+                headlineContent = { Text(it.name, fontWeight = FontWeight.Bold) },
+                supportingContent = { Text(it.tagline, textDecoration = TextDecoration.Underline) },
                 trailingContent = {
                     IbuText(
                         it.ibu.toString(), fontSize = 12, fontWeight = FontWeight.Normal
@@ -39,8 +40,7 @@ fun HomeScreen(
                 overlineContent = {
                     Text(
                         stringResource(
-                            com.misc.core.R.string.beer_first_brewed,
-                            it.firstBrewed
+                            com.misc.core.R.string.beer_first_brewed, it.firstBrewed
                         )
                     )
                 },

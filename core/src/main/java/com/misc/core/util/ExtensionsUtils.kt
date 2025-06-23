@@ -10,6 +10,9 @@ import androidx.lifecycle.ViewModel
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
+import com.misc.core.ui.theme.GreenIbu
+import com.misc.core.ui.theme.OrangeIbu
+import com.misc.core.ui.theme.RedIbu
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 
@@ -47,8 +50,9 @@ inline fun <reified T : ViewModel> NavBackStackEntry.sharedViewModel(
 @Composable
 fun ibuColor(ibu: Int): Color {
     return when {
-        ibu < 30 -> Color.Green
-        ibu in 31..65 -> Color.Yellow
-        else -> Color.Red
+        ibu in 1..30 -> GreenIbu
+        ibu in 31..65 -> OrangeIbu
+        ibu >= 66 -> RedIbu
+        else -> Color.Gray
     }
 }
